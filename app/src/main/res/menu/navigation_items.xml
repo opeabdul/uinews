@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
         <item
-            android:id="@+id/action_search"
+            android:id="@+id/action_news"
             android:title="News"
             android:icon="@drawable/ic_new_releases_black_24dp"
             android:enabled="true"
             app:showAsAction="ifRoom"/>
         <item
-            android:id="@+id/action_settings"
+            android:id="@+id/action_bulletin"
             android:title="Bulletin"
-            android:icon="@drawable/ic_new_releases_black_24dp" />
+            android:icon="@drawable/ic_library_books_black_24dp" />
         <item
-            android:id="@+id/action_navigation"
-            android:title="Information"
-            android:icon="@drawable/ic_new_releases_black_24dp"/>
+            android:id="@+id/action_information"
+            android:title="About"
+            android:icon="@drawable/ic_info_black_24dp"/>
 </menu>
