@@ -6,8 +6,7 @@
             android:id="@+id/action_news"
             android:title="News"
             android:icon="@drawable/ic_new_releases_black_24dp"
-            android:enabled="true"
-            app:showAsAction="ifRoom"/>
+            android:enabled="true"/>
         <item
             android:id="@+id/action_bulletin"
             android:title="Bulletin"
