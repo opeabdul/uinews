@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId())
             {
                 case R.id.action_news:
-                    cancelToast();
+                    cancelPreviousToast();
                     toast = Toast.makeText(MainActivity.this, "UI News Loading...", Toast.LENGTH_SHORT);
                     toast.show();
                     setFragment(newsFragment);
