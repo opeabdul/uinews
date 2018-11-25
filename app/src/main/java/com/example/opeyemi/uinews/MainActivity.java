@@ -20,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
     BulletinFragment bulletinFragment;
     NewsFragment newsFragment;
     AboutFragment aboutFragment;
+    Toast toast;//Toast to nofify user of WebView Loading
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
 
         //get fragment instances
         newsFragment = new NewsFragment();
@@ -64,25 +64,38 @@ public class MainActivity extends AppCompatActivity {
     private class NavigationSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener{
 
 
+
+
+
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
             switch (item.getItemId())
             {
                 case R.id.action_news:
-                    Toast.makeText(MainActivity.this, "News was clicked", Toast.LENGTH_SHORT).show();
+                    cancelToast();
+                    toast = Toast.makeText(MainActivity.this, "UI News Loading...", Toast.LENGTH_SHORT);
+                    toast.show();
                     setFragment(newsFragment);
                     break;
                 case R.id.action_bulletin:
-                    Toast.makeText(MainActivity.this, "Bullettin was clicked", Toast.LENGTH_SHORT).show();
+                    cancelPreviousToast();
+                    toast = Toast.makeText(MainActivity.this, "UI Bullettins Loading...", Toast.LENGTH_SHORT);
+                    toast.show();
                     setFragment(bulletinFragment);
                     break;
                 case R.id.action_information:
-                    Toast.makeText(MainActivity.this, "Information was clicked", Toast.LENGTH_SHORT).show();
+                    cancelPreviousToast();
                     setFragment(aboutFragment);
                     break;
             }
             return true;
+        }
+    }
+
+    //method to cancel previous toast for the display of another toast
+    private void cancelPreviousToast() {
+        if (toast != null){
+            toast.cancel();
         }
     }
 }
