@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">uinews</string>
+    <string name="app_label">UI NEWS &amp; BULLETING</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="group_name">Group 5</string>
+    <string name="app_info">This mobile application is developed as a project in a final year course - Computer Center Management - by Computer Science student in the
+        University of Ibadan.
+        This application is built for easy accessing of the bulletins and news about the university
+        as present on the university website "https://ui.edu.ng"
+        It was built using the various management techniques taught in the course with the efforts
+        and collaborations on various decision making process by the students listed.
+    </string>
 </resources>
